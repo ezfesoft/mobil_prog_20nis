@@ -29,7 +29,7 @@ class _MyHomePageState extends State<MyHomePage> {
   //-------------------------------
   //-------------------------------
   //--------------Değişkenler Bu Alana Yazılacak
-
+  int sayi = 0;
   //-------------------------------
   //-------------------------------
   //-------------------------------
@@ -56,7 +56,35 @@ class _MyHomePageState extends State<MyHomePage> {
             //------------------------------------
             //------------------------------------
             //------------------------------------
-
+            Text(
+              'Butona $sayi kez tıklandı.',
+              style: TextStyle(fontSize: 18, color: Colors.grey),
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton.icon(
+                  onPressed: () {
+                    setState(() {
+                      sayi++;
+                    });
+                  },
+                  icon: Icon(Icons.add),
+                  label: Text("Artır"),
+                ),
+                SizedBox(width: 10),
+                OutlinedButton.icon(
+                  onPressed: () {
+                    setState(() {
+                      sayi = 0;
+                    });
+                  },
+                  icon: Icon(Icons.refresh),
+                  label: Text("Sıfırla"),
+                ),
+              ],
+            ),
             //------------------------------------
             //------------------------------------
             //------------------------------------
