@@ -79,6 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     setState(() {
                       sayi = 0;
                     });
+                    //
                   },
                   icon: Icon(Icons.refresh),
                   label: Text("Sıfırla"),
